@@ -35,7 +35,6 @@ tic-tac-toe
 │   ├── index.html      # 主遊戲頁面 Main HTML file
 │   ├── style.css       # 樣式檔案 Styles
 │   └── script.js       # 遊戲邏輯 Game logic
-├── package.json        # npm 設定 npm config
 └── README.md           # 專案說明 Project documentation
 ```
 
@@ -49,12 +48,7 @@ tic-tac-toe
    git clone https://github.com/yourusername/tic-tac-toe.git
    cd tic-tac-toe
    ```
-2. 安裝依賴（如有）：
-   Install dependencies (if any):
-   ```bash
-   npm install
-   ```
-3. 開啟 `docs/index.html` 於瀏覽器即可遊玩。
+2. 開啟 `docs/index.html` 於瀏覽器即可遊玩。
    Open `docs/index.html` in your browser to play.
 
 ---
