@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神隱九宮鬥</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="game-title">神隱九宮鬥</h1>
+        <div class="game-rules">
+            <h2 style="font-size:1.1rem;margin-bottom:6px;">遊戲規則 / Game Rules</h2>
+            <ul style="font-size:1rem;line-height:1.6;margin:0 0 18px 0;padding-left:18px;text-align:left;">
+                <li>兩位玩家輪流在九宮格中下棋，每次只能下在空格。</li>
+                <li>每位玩家最多同時在棋盤上有三顆棋子，超過三顆時，最早下的那顆會自動消失。</li>
+                <li>先將自己的三顆棋子連成一線（橫、直、斜）者獲勝。</li>
+                <li>Players take turns placing their mark (X or O) in an empty cell.</li>
+                <li>Each player can have at most 3 marks on the board; the oldest mark will be removed automatically when placing the 4th.</li>
+                <li>The first player to align their 3 marks in a row (horizontally, vertically, or diagonally) wins.</li>
+            </ul>
+        </div>
+        <div class="status"></div>
+        <div class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <button id="restart">Restart Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "A simple Tic Tac Toe game implemented in JavaScript.",
+  "main": "public/script.js",
+  "scripts": {
+    "start": "live-server public"
+  },
+  "keywords": [
+    "tic-tac-toe",
+    "game",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

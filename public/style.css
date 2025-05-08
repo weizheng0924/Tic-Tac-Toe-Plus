@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', Arial, sans-serif;
+    background: #f7f7f7;
+}
+
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 24px 16px 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: #2d3a4b;
+    text-align: center;
+}
+
+.status {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: #4a5568;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 20px;
+}
+
+.cell {
+    background: #e2e8f0;
+    border-radius: 8px;
+    font-size: 2.5rem;
+    color: #2b6cb0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    min-height: 60px;
+    min-width: 60px;
+    user-select: none;
+}
+
+.cell:hover {
+    background: #cbd5e1;
+}
+
+.cell.taken {
+    cursor: not-allowed;
+}
+
+/* 獲勝動畫：閃爍+縮放 */
+.cell.win-animate {
+    animation: win-flash 0.25s linear 0s 3, win-scale 0.75s cubic-bezier(.4,2,.6,1) 0s 1;
+    background: #ffe066 !important;
+    color: #d97706 !important;
+    z-index: 1;
+}
+@keyframes win-flash {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(2); }
+}
+@keyframes win-scale {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.18); }
+    60% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+/* 棋盤淡出淡入動畫 */
+.board.fade-out {
+    animation: board-fadeout 0.35s forwards;
+}
+.board.fade-in {
+    animation: board-fadein 0.35s;
+}
+@keyframes board-fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@keyframes board-fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.restart {
+    background: #4299e1;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+.restart:hover {
+    background: #2b6cb0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        padding: 8vw 2vw 12vw 2vw;
+    }
+    .game-title {
+        font-size: 1.4rem;
+    }
+    .board {
+        max-width: 96vw;
+        gap: 2vw;
+    }
+    .cell {
+        font-size: 1.5rem;
+        min-height: 14vw;
+        min-width: 14vw;
+    }
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
