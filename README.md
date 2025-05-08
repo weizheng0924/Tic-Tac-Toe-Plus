@@ -22,7 +22,7 @@ This is an advanced Tic Tac Toe game implemented with HTML, CSS, and JavaScript.
 
 ```
 tic-tac-toe
-├── public
+├── docs
 │   ├── index.html      # 主遊戲頁面 Main HTML file
 │   ├── style.css       # 樣式檔案 Styles
 │   └── script.js       # 遊戲邏輯 Game logic
@@ -45,8 +45,8 @@ tic-tac-toe
    ```bash
    npm install
    ```
-3. 開啟 `public/index.html` 於瀏覽器即可遊玩。
-   Open `public/index.html` in your browser to play.
+3. 開啟 `docs/index.html` 於瀏覽器即可遊玩。
+   Open `docs/index.html` in your browser to play.
 
 ---
 
